@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASTE</title>
+
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div id="container">
+        <header>
+            <video autoplay muted loop id="myVideo">
+                <source src="./img/taste.mp4" type="video/mp4">
+            </video>
+            
+            
+            <div id="topBar">
+                <img src="/img/spcode.png" alt="spotify code">
+                <ul>
+                    <li>
+                        <a href="https://open.spotify.com/user/22urvba3i2n2o2h5sgljo6smy?si=1153dc6f1df04a8f">SPOTIFY</a>
+                    </li>
+                    <li>PLAYLISTS</li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
+
+            <div id="title">
+                <h1>TASTE</h1>
+            </div>
+
+            <div id="bottomBar">
+
+            </div>
+        </header>
+
+        <main class="albums">
+            <div class="mainTitle">
+                <span id="top">TOP ALBUMS</span>
+                <span id="bottom">OF TASTE</span>
+            </div>
+
+            <ul>
+                <li> <!-- AJAX HTML -->
+                    <img src="/img/abnh.jpg" alt="alligatorbitesneverheal" id="doechiiHTML">
+                    <span class="ajax-stuff" id="doechii-html"></span>
+                </li>
+                <li>
+                    <img src="/img/lana.jpg" alt="lana" id="szaHTML">
+                    <!-- <span class="album">SOS Deluxe: Lana</span>
+                    <span class="artist">SZA</span> -->
+                    <span class="ajax-stuff" id="sza-html"></span>
+                </li>
+                <li>
+                    <img src = "/img/nurture.png" alt="nurture" id="porterHTML">
+                    <!-- <span class="album">Nurture</span>
+                    <span class="artist">Porter Robinson</span> -->
+                    <span class="ajax-stuff" id="porter-html"></span>
+                </li>
+                <li>
+                    <img src = "/img/freudian.jpg" alt="freudian" id="danielHTML">
+                    <!-- <span class="album">Freudian</span>
+                    <span class="artist">Daniel Caesar</span> -->
+                    <span class="ajax-stuff" id="daniel-html"></span>
+                </li>
+                <li>
+                    <img src = "/img/rpwp.jpg" alt="rightplacewrongperson" id="rmHTML">
+                    <!-- <span class="album">Right Place, Wrong Person</span>
+                    <span class="artist">RM</span> -->
+                    <span class="ajax-stuff" id="rm-html"></span>
+                </li>
+                <li> <!-- AJAX JSON -->
+                    <img src = "/img/mutt.png" alt="mutt" id="muttJSON">
+                    <span class="ajax-stuff" id="mutt-json"></span>
+                </li>
+                <li>
+                    <img src = "/img/jaguar.jpg" alt="jaguar" id="victoriaJSON">
+                    <!-- <span class="album">Jaguar II</span>
+                    <span class="artist">Victoria Monet</span> -->
+                    <span class="ajax-stuff" id="victoria-json"></span>
+                </li>
+                <li>
+                    <img src = "/img/chromakopia.jpg" alt="chromakopia" id="tylerJSON">
+                    <!-- <span class="album">Chromakopia</span>
+                    <span class="artist">Tyler, The Creator</span> -->
+                    <span class="ajax-stuff" id="tyler-json"></span>
+                </li>
+                <li>
+                    <img src = "/img/gnx.jpg" alt="gnx" id="kendrickJSON">
+                    <!-- <span class="album">GNX</span>
+                    <span class="artist">Kendrick Lamar</span> -->
+                    <span class="ajax-stuff" id="kendrick-json"></span>
+                </li>
+                <li>
+                    <img src = "/img/layover.png" alt="layover" id="vJSON">
+                    <!-- <span class="album">Layover</span>
+                    <span class="artist">V</span> -->
+                    <span class="ajax-stuff" id="v-json"></span>
+                </li>
+            </ul>
+        </main>
+
+        <footer>
+            <span id="name">Trey Tarrayo</span>
+            <span id="copyright">© 2025 TASTE</span>
+        </footer>
+    </div>
+
+    <script src="/js/client.js"></script>
+</body>
+</html>

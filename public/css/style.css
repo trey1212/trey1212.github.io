@@ -1,0 +1,368 @@
+@font-face {
+    font-family: 'integral';
+    src: url('/font/integral/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'integral';
+    src: url('/font/integral/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'devina_rodent';
+    src: url('/font/devina_rodent/DevinaRodentRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'integral';
+}
+
+#container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    /* vh to take the entire height of the page */
+    grid-template-areas:
+        "header"
+        "main"
+        "footer";
+
+    /* Number of columns and their size */
+    grid-template-columns: 1fr;
+    /* 1fr takes the entire width of the page.
+    The two other rows are going to be as big as the content inside */
+    grid-template-rows: 1fr auto auto;
+}
+
+/* Header content */
+#container>header {
+    grid-area: header;
+    overflow: hidden;
+    /*Adds the header to the top of the page.
+    Because position: absolute is in myVideo, you need this
+    to put header at the top */
+    position: relative;
+    background-color: aqua;
+    background: rgba(0, 0, 0, 1);
+    height: 100vh;
+    /* vh to take the entire height of the page */
+}
+
+#myVideo {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    /* Makes the video take the entire header */
+    filter: blur(5px);
+}
+
+#topBar {
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    height: auto;
+}
+
+#topBar>img {
+    width: 15%;
+    height: 15%;
+}
+
+#topBar>ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+}
+
+#topBar>ul>li {
+    list-style-type: none;
+    color: white;
+    font-weight: normal;
+    margin-right: 10px;
+    transition: color 0.2s;
+}
+
+#topBar>ul>li:hover {
+    cursor: pointer;
+    color:#f2c624;
+}
+
+#topBar>ul>a>li {
+    list-style-type: none;
+    color: white;
+    font-weight: normal;
+    margin-right: 10px;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+}
+
+#topBar>ul>li>a {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#topBar>ul>li>a:hover {
+    cursor: pointer;
+    color:#f2c624;
+}
+
+#title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: white;
+    font-size: 70px;
+}
+/* Header content */
+
+/* Main content */
+#container>main {
+    grid-area: main;
+    background-color: #171717;
+}
+
+.mainTitle {
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+#top {
+    float: left;
+    color: white;
+    font-size: 70px;
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+#bottom {
+    position: relative;
+    color: white;
+    font-size: 40px;
+    top: 30px;
+}
+
+.albums>ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.albums>ul>li {
+    margin-bottom: 50px;
+    flex: 1 1 20%;
+    display: flex;
+    flex-direction: column;
+    /* Controls the direction of img and text */
+    align-items: center;
+}
+
+.albums>ul>li>img {
+    width: 90%;
+    padding-bottom: 10px;
+    transition: transform 0.2s;
+    /* Controls how long the transition will be */
+}
+
+.albums>ul>li>img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    /* Makes the image larger when it is hovered over */
+}
+
+.album {
+    color: #f2c624;
+    font-family: devina_rodent;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.artist {
+    color: #f2c624;
+    font-family: devina_rodent;
+    font-weight: normal;
+}
+
+/* Main content */
+
+#container>footer {
+    grid-area: footer;
+    font-weight: normal;
+    display: flex;
+    border-top: 1px solid black;
+    background-color: #141414;
+}
+
+#name {
+    flex: 1;
+    font-weight: normal;
+    font-size: 15px;
+    color: white;
+    padding: 1px 0px 5px 10px;
+}
+
+#copyright {
+    font-size: 15px;
+    color: white;
+    padding: 1px 10px 5px 0px;
+}
+
+/* AJAX content */
+
+.ajax-stuff>ul {
+    padding: 0;
+    margin: 0;
+    font-family: devina_rodent;
+    color: #f2c624;
+    list-style-type: none;
+    text-align: center;
+}
+
+.ajax-stuff>ol {
+    padding: 0;
+    margin: 0;
+    font-family: devina_rodent;
+    color: #f2c624;
+    list-style-type: none;
+    text-align: center;
+}
+
+#abnhTitle {
+    font-family: devina_rodent;
+    font-weight: bold;
+}
+/* AJAX content */
+
+@media screen and (max-width : 1280px) and (min-width : 701px) {
+    #topBar>img {
+        width: 10%;
+        height: 10%;
+    }
+
+    #topBar>ul>li {
+        font-size: 15px;
+    }
+
+    #title {
+        font-size: 50px;
+    }
+
+    .mainTitle {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    #top {
+        font-size: 50px;
+    }
+
+    #bottom {
+        font-size: 30px;
+        top: 20px;
+    }
+
+    .album {
+        font-size: 10px;
+    }
+
+    .artist {
+        font-size: 10px;
+    }
+
+    #name {
+        padding-top: 3px;
+        font-size: 10px;
+    }
+    
+    #copyright {
+        padding-top: 3px;
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #topBar>img {
+        width: 30%;
+        height: 30%;
+    }
+
+    #topBar>ul>li {
+        font-size: 10px;
+    }
+
+    #title {
+        font-size: 30px;
+    }
+
+    .mainTitle {
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+
+    #top {
+        font-size: 30px;
+    }
+
+    #bottom {
+        font-size: 20px;
+        top: 10px;
+    }
+
+    .albums>ul>li {
+        flex: 1 1 50%;
+    }
+
+    .album {
+        font-size: 15px;
+    }
+
+    .artist {
+        font-size: 15px;
+    }
+
+    #name {
+        padding-top: 3px;
+        font-size: 10px;
+    }
+    
+    #copyright {
+        padding-top: 3px;
+        font-size: 10px;
+    }
+}
