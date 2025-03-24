@@ -36,7 +36,7 @@ document.querySelector("#muttJSON").addEventListener("click", function (e) {
         // If the element already has content, clear it
         muttJSONElement.innerHTML = "";
     } else {
-    ajaxGET("/mutt?format=json", function (data) {
+    ajaxGET("./app/data/mutt.js?format=json", function (data) {
         console.log("Before parsing", data);
         // this call is JSON so we have to parse it:
         let parsedData = JSON.parse(data);
@@ -58,7 +58,7 @@ document.querySelector("#victoriaJSON").addEventListener("click", function (e) {
         // If the element already has content, clear it
         victoriaJSONElement.innerHTML = "";
     } else {
-    ajaxGET("/victoria?format=json", function (data) {
+    ajaxGET("./app/data/victoria.js?format=json", function (data) {
         console.log("Before parsing", data);
         // this call is JSON so we have to parse it:
         let parsedData = JSON.parse(data);
@@ -80,7 +80,7 @@ document.querySelector("#tylerJSON").addEventListener("click", function (e) {
         // If the element already has content, clear it
         tylerJSONElement.innerHTML = "";
     } else {
-    ajaxGET("/tyler?format=json", function (data) {
+    ajaxGET("./app/data/tyler.js?format=json", function (data) {
         console.log("Before parsing", data);
         // this call is JSON so we have to parse it:
         let parsedData = JSON.parse(data);
@@ -102,7 +102,7 @@ document.querySelector("#kendrickJSON").addEventListener("click", function (e) {
         // If the element already has content, clear it
         kendrickJSONElement.innerHTML = "";
     } else {
-    ajaxGET("/kendrick?format=json", function (data) {
+    ajaxGET("./app/data/kendrick.js?format=json", function (data) {
         console.log("Before parsing", data);
         // this call is JSON so we have to parse it:
         let parsedData = JSON.parse(data);
@@ -124,7 +124,7 @@ document.querySelector("#vJSON").addEventListener("click", function (e) {
         // If the element already has content, clear it
         vJSONElement.innerHTML = "";
     } else {
-    ajaxGET("/v?format=json", function (data) {
+    ajaxGET("./app/data/v.js?format=json", function (data) {
         console.log("Before parsing", data);
         // this call is JSON so we have to parse it:
         let parsedData = JSON.parse(data);
@@ -147,7 +147,7 @@ document.querySelector("#doechiiHTML").addEventListener("click", function (e) {
         doechiiHTMLElement.innerHTML = "";
     } else {
         // If the element is empty, fetch and display the content
-        ajaxGET("/doechii?format=html", function(data) {
+        ajaxGET("./app/data/doechii.html?format=html", function(data) {
             console.log(data);
             // since it's HTML, let's drop it right in
             doechiiHTMLElement.innerHTML = data;
@@ -163,7 +163,7 @@ document.querySelector("#szaHTML").addEventListener("click", function (e) {
         szaHTMLElement.innerHTML = "";
     } else {
         // If the element is empty, fetch and display the content
-        ajaxGET("/sza?format=html", function(data) {
+        ajaxGET("./app/data/sza.html?format=html", function(data) {
             console.log(data);
             // since it's HTML, let's drop it right in
             szaHTMLElement.innerHTML = data;
@@ -179,7 +179,7 @@ document.querySelector("#porterHTML").addEventListener("click", function (e) {
         porterHTMLElement.innerHTML = "";
     } else {
         // If the element is empty, fetch and display the content
-        ajaxGET("/porter?format=html", function(data) {
+        ajaxGET("./app/data/porter.html?format=html", function(data) {
             console.log(data);
             // since it's HTML, let's drop it right in
             porterHTMLElement.innerHTML = data;
@@ -195,7 +195,7 @@ document.querySelector("#danielHTML").addEventListener("click", function (e) {
         danielHTMLElement.innerHTML = "";
     } else {
         // If the element is empty, fetch and display the content
-        ajaxGET("/daniel?format=html", function(data) {
+        ajaxGET("./app/data/daniel.html?format=html", function(data) {
             console.log(data);
             // since it's HTML, let's drop it right in
             danielHTMLElement.innerHTML = data;
@@ -211,7 +211,7 @@ document.querySelector("#rmHTML").addEventListener("click", function (e) {
         rmHTMLElement.innerHTML = "";
     } else {
         // If the element is empty, fetch and display the content
-        ajaxGET("/rm?format=html", function(data) {
+        ajaxGET("./app/data/rm.html?format=html", function(data) {
             console.log(data);
             // since it's HTML, let's drop it right in
             rmHTMLElement.innerHTML = data;

@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'integral';
-    src: url('/font/integral/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
+    src: url('../font/integral/Fontspring-DEMO-integralcf-bold.otf') format('opentype');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'integral';
-    src: url('/font/integral/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
+    src: url('../font/integral/Fontspring-DEMO-integralcf-regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'devina_rodent';
-    src: url('/font/devina_rodent/DevinaRodentRegular.ttf') format('truetype');
+    src: url('../font/devina_rodent/DevinaRodentRegular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
